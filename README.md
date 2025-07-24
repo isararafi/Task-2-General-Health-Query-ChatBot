@@ -1,56 +1,54 @@
 # Health Query Chatbot 🤖✨
 
-A simple **General Health Query Chatbot** built in a **Jupyter Notebook** for my internship task.
+A simple **General Health Query Chatbot** built in a **Jupyter Notebook** as part of my internship project.
 
-This chatbot uses the **Cohere LLM API** to answer **general health-related questions** using **prompt engineering** to ensure **safe, friendly, clear** responses without giving specific medical advice.
-
----
-
-## **Task Objective**
-
-- Build a chatbot that answers **general health questions**.
-- Use **prompt engineering** to keep responses clear, friendly, and **safe**.
-- Add a **safety filter** to avoid giving harmful or specific medical treatment advice.
-- Example queries:  
-  - *“What causes a sore throat?”*  
-  - *“Is paracetamol safe for children?”*  
-  - *“What are symptoms of the flu?”*
+This chatbot answers **general health-related questions** using a **Large Language Model (LLM)** with **prompt engineering** and a **medical safety filter** to ensure it does not give harmful or specific medical treatment advice.
 
 ---
 
-## **How It Works**
+## 📌 **Task Objective**
 
-- **Language Model**: Uses **Cohere’s `command-nightly`** model via the Cohere API.
-- **Jupyter Notebook**: All code is in a single `.ipynb` file — easy to run step by step.
-- **Prompt Engineering**: A `preamble` guides the chatbot to:
-  - Answer only **general** questions.
-  - Never give **specific dosages or treatments**.
-  - Always recommend consulting a **qualified doctor**.
-- **Conversation Loop**: Users can interactively ask multiple questions in one run.
-
----
-
-## ✅ **Key Skills Demonstrated**
-
-- 🗂️ **Prompt Design**
-- 🔗 **Using an LLM API**
-- 🛡️ **Safety Handling**
-- 💬 **Simple Conversational Logic**
+- Build a chatbot that can answer **general health-related questions**.
+- Use **prompt engineering** to make responses clear, friendly, and safe.
+- Integrate a **safety filter** to avoid giving medical advice that could be harmful.
+- Demonstrate the use of an **LLM API** inside a **Python Jupyter Notebook**.
+- Example queries tested include:
+  - *“What causes a sore throat?”*
+  - *“Is paracetamol safe for children?”*
+  - *“What causes headaches?”*
+  - *“What dosage of paracetamol is safe for a 20-year-old?”* (should trigger the safety filter)
 
 ---
 
-## ⚠️ **Important Note**
+## 📊 **Dataset Used**
 
-**This chatbot is for educational purposes only.**  
-It does **NOT** give professional medical advice.  
-**Always consult a qualified healthcare provider** for any medical questions or treatment.
+**No static dataset** is used.  
+The chatbot uses **real-time user input** and queries a live **Cohere LLM API** for each question.
+
+---
+
+## 🧩 **Models Applied**
+
+- **Model Used:** Cohere `command-nightly`  
+- **Access Method:** Cohere’s official **REST API**
+- **Interface:** Python code in a **Jupyter Notebook**
+
+---
+
+## ✅ **Key Results and Findings**
+
+- ✅ Successfully implemented a working **health chatbot** that handles **general health questions**.
+- ✅ Designed and tested **prompt engineering** to guide the LLM’s behavior.
+- ✅ Verified the **medical safety filter** works: it blocks direct medical treatment instructions, dosages, and prescriptions.
+- ✅ Demonstrated safe use of a **large language model** in a conversational assistant.
+- ✅ Ready for internship submission with clean, well-commented code and clear documentation.
 
 ---
 
 ## 🚀 **How to Run**
 
-1. Clone or download the repository.
-2. Open the `.ipynb` in **Jupyter Notebook**.
-3. Insert your **Cohere API key** in the designated cell:
+1. Clone or download this repository.
+2. Open the `.ipynb` file in **Jupyter Notebook**.
+3. Insert your **Cohere API key**:
    ```python
-   
+   COHERE_API_KEY = "YOUR_COHERE_API_KEY"
